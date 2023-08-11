@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stlye.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section>
+            <nav>
+                <ul id="ww" class="topnav">
+                    <li id="nav" style="float:left" class="right"><a href="register.html">Register</a></li>
+                    <li id="nav" style="float:right" class="right"><a href="login.html" id="a" class="active">Login</a></li> 
+                </ul>
+                <div  class="mobile-container">
+                    <div id="myLinks">
+                        <a href="register.html">Register</a>
+                        <a href="login.html" id="a" class="active">Login</a>
+                    </div>
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <header>welcome back !</header>
+            <p class="r">Login here</p>
+            <div>
+                <form action="index.html">
+                    <label for="email">Email</label><br>
+                    <input type="email" required placeholder="samueleffiong@gmail.com" id="email"><br><br>
+                    <label for="Password">Password</label><br>
+                    <input type="password" required placeholder="password" id="Password"><br>
+                    <div>
+                        <label><input id="rememberme" name="rememberme" value="remember" type="checkbox" />Remember me</label>
+                    </div>
+                    <div class="btn0">
+                        <a href="register.html" class="btn1">If don't have An Account click Register</a>
+                        <button type="submit" class="btn2">Sign In</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </section>
+        <section>
+        </section>
+        
+    </main>
+    <footer>&#9400; SAMUEL EFFIONG FOR ZURI TEAM</footer>
+    <script src="index.js"></script>
+</body>
+</html>

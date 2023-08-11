@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* General */
+
+  img {
+    @apply w-full;
+  }
+
+  a {
+    @apply inline-block;
+  }
+
+  /* Utilities */
+
+  .container {
+    @apply px-6;
+  }
+
+  .section-heading {
+    @apply text-3xl font-normal text-center md:text-4xl text-primary-darkblue sm:text-left;
+  }
+
+  .section-main-paragraph {
+    @apply text-sm text-center text-neutral-grayishblue md:text-lg sm:text-left;
+  }
+
+  .cta-btn {
+    @apply text-sm font-bold text-white bg-main-gradient pt-2.75 pb-3 pl-8.25 pr-8.5 rounded-full hover:opacity-60 transition-all;
+  }
+
+  /* Header */
+
+  .header-nav-link {
+    @apply lg:text-sm lg:font-normal lg:text-neutral-grayishblue lg:hover:text-primary-darkblue text-primary-darkblue lg:after:content-[''] lg:after:block lg:after:w-0 lg:hover:after:w-full lg:after:h-1 lg:after:mx-auto lg:after:bg-main-gradient lg:after:mt-6.5 lg:after:transition-all transition-all;
+  }
+
+  .header-btn {
+    @apply lg:hidden;
+  }
+
+  .header-btn-hamburger {
+    @apply w-6 cursor-pointer;
+  }
+
+  .header-btn-close {
+    @apply w-4.5 cursor-pointer hidden;
+  }
+
+  .header.active .header-btn-hamburger {
+    @apply hidden;
+  }
+
+  .header.active .header-btn-close {
+    @apply block mr-0.75;
+  }
+
+  .header.active .header-nav {
+    @apply py-7 h-max lg:pb-0 shadow-header-nav;
+  }
+
+  /* Features */
+
+  .features-grid-item {
+    @apply flex flex-col items-center sm:items-start;
+  }
+
+  .features-grid-img {
+    @apply overflow-hidden rounded-full w-18 h-18;
+  }
+
+  .features-grid-heading {
+    @apply text-xl font-normal md:text-2xl text-primary-darkblue mt-6 sm:mt-9.5 text-center sm:text-left;
+  }
+
+  /* Blog */
+
+  .blog-grid-item {
+    @apply overflow-hidden bg-white rounded-md;
+  }
+
+  .blog-grid-item-img {
+    @apply overflow-hidden h-50;
+  }
+
+  .blog-grid-item-img img {
+    @apply object-cover h-full;
+  }
+
+  .blog-grid-item-text {
+    @apply pt-5 pb-10.5 sm:pb-6 px-7.75 sm:px-6 xl:pr-8;
+  }
+
+  .blog-grid-item-text-author {
+    @apply block text-xxs text-neutral-grayishblue;
+  }
+
+  .blog-grid-item-text-link {
+    @apply leading-tight transition-all text-primary-darkblue hover:text-primary-brightlimegreen;
+  }
+
+  .blog-grid-item-text-paragraph {
+    @apply text-xs text-neutral-grayishblue mt-1.25;
+  }
+
+  /* Footer */
+
+  .footer-nav-link {
+    @apply text-base transition-all text-neutral-lightgrayishblue hover:text-primary-darklimegreen;
+  }
+}

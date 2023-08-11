@@ -1,0 +1,14 @@
+{
+  "name": "sex",
+  "version": "1.0.0",
+  "description": "for testing my first work",
+  "main": "sex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SAMUEL EFFIONG",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

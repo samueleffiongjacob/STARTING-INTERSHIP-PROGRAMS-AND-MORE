@@ -1,0 +1,14 @@
+{
+  "name": "projectee",
+  "version": "1.0.0",
+  "description": "new checking ",
+  "main": "bak.js",
+  "scripts": {
+    "test": "node bak.js"
+  },
+  "author": "SAMUEL EFFIONG",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^17.7.2"
+  }
+}

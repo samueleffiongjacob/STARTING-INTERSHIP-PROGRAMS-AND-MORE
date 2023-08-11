@@ -1,0 +1,62 @@
+linux user:
+for ssh without password:
+http://linuxproblem.org/art_9.html
+
+How can I set up password-less SSH login?
+https://askubuntu.com/questions/46930/how-can-i-set-up-password-less-ssh-login
+
+Execute this command (if you already have an SSH key, you can skip this step):
+
+ssh-keygen -t rsa -b bit(4320) -p samuel -f 
+ssh-keygen -t rsa
+
+Easiest way to copy ssh keys to another machine?
+https://askubuntu.com/questions/4830/easiest-way-to-copy-ssh-keys-to-another-machine/4833#4833
+
+passphrase: samueleffiong
+
+========================================================
+new ways
+============================================
+
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Vm3Fxl+Sy5XtevNBfpS1+Asuzeq8ov9GbTbda7HPT0w root@1d50b23bdc49
+The key's randomart image is:
++---[RSA 3072]----+
+|             o..o|
+|           . .*.=|
+|          . oo.*=|
+|         . . .o++|
+|        S   . =oE|
+|       .   . *.X+|
+|          . * o.%|
+|         ..o + B.|
+|       .o.=*+ . *|
++----[SHA256]-----+
+
+=========================================================================
+100.26.178.1
+==================================
+checker
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN
+===========================================
+adding checker to your project:
+echo ssh-alx >> authorised key
+
+>> it must be 2 to avoid overiding
+
+========================================
+log in to your server
+ssh -v ubuntu@100.26.178.1
+=========================================
+curl localhost
+====================================================
+seeing ssh file
+
+cat /etc/ssh/ssh_config

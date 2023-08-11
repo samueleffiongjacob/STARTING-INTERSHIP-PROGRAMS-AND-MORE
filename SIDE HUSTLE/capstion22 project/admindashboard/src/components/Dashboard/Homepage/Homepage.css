@@ -1,0 +1,70 @@
+.dash-details {
+ margin: 2em;
+}
+
+.dash-details .graph {
+
+ background-color: rgba(128, 128, 128, 0.338);
+ width: 600px;
+ padding: 50px 30px;
+ margin-top: 20px;
+
+}
+
+.dash-details .graf {
+ display: flex;
+ width: 900px;
+ padding: 50px 30px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(183, 126, 236, 0.096);
+  margin-top: 20px;
+
+} 
+
+.one {
+ padding: 45px;
+ width: 500px;
+}
+
+.dash-details .line {
+ width: 900px;
+ align-items: center;
+ justify-content: center;
+ padding: 30px;
+ background-color: rgba(50, 80, 189, 0.181);
+ margin-top: 20px;
+}
+
+
+.dash-details .meet {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-right: 90px;
+ margin-bottom: 20px;
+}
+  .dash-details .meet .gr {
+   background-color: blueviolet;
+   padding: 15px;
+   border-radius: 50px;
+   font-size: 30px;
+   color: white;
+  }
+
+.dash-details h2 {
+
+ color: #2b32b2;
+ font-weight: bold;
+ font-size: 20px;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ margin-bottom: 30px;
+ border: 1px dashed rgb(165, 11, 11);
+ display: inline-block;
+ padding: 10px;
+}
+.com h1 {
+ font-size: 30px;
+ margin-bottom: 20px;
+ margin-left:40px;
+}

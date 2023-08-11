@@ -1,0 +1,15 @@
+1) npm i @emailjs/browser
+2)  npm i --save @fortawesome/free-brands-svg-icons 
+3) npm i @fortawesome/free-solid-svg-icons
+4)   npm install --save @fortawesome/react-fontawesome  ref(https://www.codegrepper.com/search.php?q=npm%20install%20react-fontawesome)
+
+5) npm i animate.css
+6)npm i gsap-trial
+7) npm i loaders.css
+Adding React Leaflet
+8)npm install react-leaflet
+8i)npm install react-leaflet ( intall later)
+9)npm install react-loaders
+10)npm install react-router-dom
+11) npm i sass
+portfolio_web

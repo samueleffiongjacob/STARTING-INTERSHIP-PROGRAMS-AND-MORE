@@ -1,0 +1,11 @@
+.settings_members img {
+ border-radius: 50px;
+ width: 60px;
+ height: 60px;
+    box-shadow: 6px 4px 38px 4px rgba(0, 0, 0, 0.214);
+}
+th {
+ color: blue;
+
+ font-size: 1.3em;
+}

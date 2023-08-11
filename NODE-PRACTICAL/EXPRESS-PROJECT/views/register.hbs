@@ -1,0 +1,63 @@
+    <main>
+        <section>
+            <nav>
+                <ul id="ww" class="topnav mobile-container mobilenav">
+                    <li id="nav" style="float:left" class="right"><a href="register.hbs" class="active">{{caption}}</a></li>
+                    <li id="nav" style="float:right" class="right"><a href="login.hbs" id="a">{{caption1}}</a></li>
+                </ul>
+
+                <div class="mobile-container">
+                    <div id="myLinks">
+                        <a href="register.hbs" class="active">{{caption}}</a>
+                        <a href="login.hbs" id="a">{{caption1}}</a>
+                    </div>
+
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                
+            </nav>
+        </section>
+
+
+        <header>{{header}}</header>
+        <section>
+            <div class="container">
+                <form action="index.hbs">
+                    <label for="first">{{header1}}</label><br>
+                    <input type="text" placeholder="Samuel Effion" id="first" required><br><br>
+                    <label for="second">{{caption2}}</label><br>
+                    <input type="text" placeholder="Samuel Effion" id="second" required><br><br>
+                    <label for="phone">{{caption3}}</label><br>
+                    <input type="tel" placeholder="080654217643" required id="phone" maxlength="15" minlength="+"><br><br>
+                    <label for="gender" >{{caption4}}</label><br>
+                        <select class="minimal " required id="gender">
+                            <option disabled selected hidden value="">{{option}}</option>
+                            <option>{{option1}}</option>
+                            <option>{{option2}}</option>
+                            <option>{{option3}}</option>
+                        </select><br><br>
+                    
+                    <label for="country">{{caption5}}</label><br>
+                    <input type="text" placeholder="country" required id="country"><br><br>
+                    <label for="state">{{caption6 }}</label><br>
+                    <input type="text" placeholder="Akwa Ibom" required id="state"><br><br>
+                    <label for="email">{{caption7}}</label><br>
+                    <input type="email" required placeholder="samueleffiong@gmail.com" id="email"><br><br>
+                    <label for="password">{{caption8 }}</label><br>
+                    <input type="password" required id="password" placeholder="Password" onkeyup='check();'pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
+                    <label for="confirm">{{caption9 }}</label><br>
+                    <input type="password" required id="confirm_password" placeholder="Confirm Password" onkeyup='check() ;'pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
+                    <button type="submit" class="btn">{{caption}}</button>
+                </form>
+            </div>
+            
+        </section>
+
+    
+    </main>
+    <footer>&#9400; {{footer}}</footer>
+
+    <script src="index.js"></script>

@@ -1,0 +1,179 @@
+      body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ecf0f3;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      overflow: hidden;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container {
+      height: 630px;
+      width: 480px;
+      padding: 40px;
+      position: relative;
+      border-radius: 10%;
+      box-sizing: border-box;
+      background: #ecf0f3;
+
+
+      box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    }
+
+    .main-body {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    .brand-logo {
+      height: 100px;
+      width: 100px;
+      /* background: url(https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png) no-repeat center center/cover; */
+      background: url(./CLIPLY_372109260_TWITTER_LOGO_400.gif) no-repeat center center/cover;
+      margin: auto;
+      border-radius: 50%;
+      box-sizing: border-box;
+
+      box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+      animation-name: scarface;
+      animation-duration: 5s;
+
+      transition-property: box-shadow;
+      transition-duration: 10s;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes scarface {
+      0%   {background-color: #ecf0f3;}
+      25%  {background-color: #cfe2f1;}
+      50%  {background-color: #7ebdee;}
+      100% {background-color: #7bc0f5;}
+    }
+
+    .brand-logo:hover {
+      box-shadow: -7px -7px 10px #cbced1, 7px 7px 10px white;
+    }
+
+    .brand-title {
+      margin-top: 10px;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #1DA1F2;
+      letter-spacing: 1px;
+    }
+
+    input {
+      background: #ecf0f3;
+      padding: 10px;
+      padding-left: 20px;
+      height: 50px;
+      font-size: 14px;
+      border-radius: 50px;
+      border: none;
+
+      box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    }
+
+    button{
+      background: #1DA1F2;
+      color: white;
+      padding: 10px;
+      padding-left: 20px;
+      margin-top: 5px;
+      height: 40px;
+      width: 250px;
+      border-radius:20px;
+      border: none;
+      cursor: pointer;
+      font-weight: 900;
+
+      box-shadow:  6px 6px 6px #cbced1, -6px -6px 6px white;
+      transition: 2s ease-in-out;
+    }
+
+    button:hover {
+      box-shadow: none;
+      background: #1DA1F2;
+      color: black;
+      box-shadow: 6px 6px 6px #cbced1,  -6px -6px 6px white;
+      font-size: large;
+      }
+    
+    label, input, button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    input::placeholder {
+      color: gray;
+      padding-left: 20px;
+    }
+
+    /* a {
+      position: absolute;
+      font-size: 10px;
+      bottom: 4px;
+      right: 3px;
+      text-decoration: none;
+      color: white;
+      background: black;
+      border-radius: 10px;
+      padding: 3px;
+    } */
+
+    .input_box .icon{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: grey;
+    }
+
+    .option_div{
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .option_div .check_box{
+      display: flex;
+      /* align-items: center; */
+      cursor: pointer;
+      flex-direction: row
+    }
+    .option_div span{
+      margin-left: 5px;
+      font-size: 16px;
+      color: #333;
+      flex-direction: row
+    }
+    .option_div .forget_div a{
+      font-size: 16px;
+      color: #1DA1F2;
+    }
+
+    .main-body .sign_up{
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 25px;
+      line-height: 50px;
+    }
+    .sign_up a{
+      color: #1DA1F2;
+    }
+    .main-body a{
+      text-decoration: none;
+    }
+    .main-body a:hover{
+      text-decoration: underline;
+    }
+
+   

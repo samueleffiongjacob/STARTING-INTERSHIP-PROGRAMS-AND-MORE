@@ -1,0 +1,14 @@
+{
+  "name": "fuckhard",
+  "version": "1.0.0",
+  "description": "same project in backend folder",
+  "main": "bb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SAMUEL EFFIONG",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

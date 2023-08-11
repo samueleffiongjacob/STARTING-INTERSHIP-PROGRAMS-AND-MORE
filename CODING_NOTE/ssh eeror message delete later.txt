@@ -1,0 +1,18 @@
+The authenticity of host '100.26.177.145 (100.26.177.145)' can't be established.
+ECDSA key fingerprint is SHA256:okRdgsR78B5CtTRMXZEemSqxnyNoUkNiZJClXz84OgY.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '100.26.177.145' (ECDSA) to the list of known hosts.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0755 for '/root/.ssh/schools' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/root/.ssh/schools": bad permissions
+ubuntu@100.26.177.145: Permission denied (publickey).
+
+====================================================
+after doing chmod 
+Load key "/root/.ssh/school": Is a directory
+ubuntu@100.26.177.145: Permission denied (publickey).
+root@b10945d49fdf:/alx-system_engineering-devops/0x0B-ssh# client_loop: send disconnect: Connection reset

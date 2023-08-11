@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: ogidispearl
+spec:
+    containers:
+        - image: docker.io/ogidispearl/ogidispearl-project-limited-api-v1
+          name: webapp
+          imagePullPolicy: Always
+          resources: {}
+          ports:
+              - containerPort: 3080

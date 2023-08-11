@@ -1,0 +1,457 @@
+/* ------------- */
+/* Components */
+/* ------------- */
+
+/* navbar & footer */
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+.nav > .btn {
+  background-color: var(--headings);
+}
+
+.nav > .image_wrapper {
+  height: 64px;
+  width: 64px;
+}
+
+.nav > .btn:hover {
+  background-color: var(--graphic);
+}
+
+/* btn */
+
+.btn {
+  align-items: center;
+  appearance: none;
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: var(--backgroud);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  font-family: var(--ff-jakarta-sans);
+  font-size: var(--fs-btn);
+  width: 228px;
+  height: 56px;
+  line-height: var(--p-line-height);
+  text-transform: capitalize;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* hero */
+
+.hero {
+  display: grid;
+  row-gap: 4rem;
+}
+
+/* main */
+
+.main {
+  display: grid;
+  justify-items: center;
+  row-gap: 10rem;
+}
+
+/* header */
+
+.hero > header > p {
+  max-width: 55ch;
+  text-align: center;
+}
+.hero > header > h1 {
+  text-align: center;
+}
+.hero > header {
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+/* categories */
+
+.categories {
+  display: grid;
+  grid-template-areas:
+    "graphic ui apps photo"
+    "graphic illus illus motion";
+  row-gap: 1rem;
+  column-gap: 1rem;
+  color: var(--backgroud);
+  width: 100%;
+}
+
+.graphic,
+.ui,
+.apps,
+.illustration,
+.photography,
+.motion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--category-padding);
+  border-radius: var(--category-radius);
+}
+
+.graphic {
+  grid-area: graphic;
+  height: 364px;
+  width: 354px;
+  background-color: var(--graphic);
+}
+
+.graphic > .image_wrapper {
+  align-self: flex-end;
+  width: 128px;
+  height: 192px;
+}
+
+.ui {
+  grid-area: ui;
+  height: 182px;
+  width: 164px;
+  background-color: var(--uiux);
+}
+.ui > .image_wrapper {
+  align-self: flex-end;
+  width: 64px;
+  height: 64px;
+}
+
+.apps {
+  grid-area: apps;
+  height: 182px;
+  width: 164px;
+  background-color: var(--apps);
+}
+.apps > .image_wrapper {
+  align-self: flex-end;
+  width: 64x;
+  height: 64px;
+}
+.illustration {
+  grid-area: illus;
+  height: 158px;
+  width: 354px;
+  background-color: var(--illustrations);
+}
+
+.illustration > .image_wrapper {
+  align-self: flex-end;
+  width: 128px;
+  height: 64px;
+}
+
+.photography {
+  grid-area: photo;
+  height: 182px;
+  width: 354px;
+  background-color: var(--photography);
+}
+
+.photography > .image_wrapper {
+  align-self: flex-end;
+  width: 160px;
+  height: 64px;
+}
+.motion {
+  grid-area: motion;
+  height: 158px;
+  width: 354px;
+  background-color: var(--motion-graphics);
+}
+
+.motion > .image_wrapper {
+  align-self: flex-end;
+  width: 128px;
+  height: 64px;
+}
+
+/* bio */
+
+.bio {
+  display: grid;
+  grid-template-areas: "image body";
+  align-items: center;
+  column-gap: 4rem;
+}
+.bio > .image_wrapper {
+  grid-area: image;
+  width: 445px;
+  height: 445px;
+}
+.bio > .bio_container {
+  grid-area: body;
+}
+.bio > .bio_container > .bio_body {
+  width: 540px;
+  display: grid;
+  row-gap: 2rem;
+  padding-inline: 2rem;
+}
+.bio_body > .btn {
+  background-color: var(--illustrations);
+}
+.bio_body > .btn:hover {
+  background-color: var(--uiux);
+}
+
+/* projects */
+.porjects {
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+/* slider */
+.slider_container {
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
+  scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
+  margin: 0 auto 0 auto;
+  width: 100%;
+  height: fit-content;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: x proximity; */
+}
+
+.slider_container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar on Webkit based browsers (Chrome, Safari, etc) */
+  -webkit-overflow-scrolling: touch; /* On touch screens the content continues to scroll for a while after finishing the scroll gesture */
+}
+
+.slider_container > .image_wrapper {
+  min-width: 540px;
+  min-height: 360px;
+  margin: 15px;
+  /* scroll-snap-align: center; */
+}
+
+.slider_container > .image_wrapper > span > img {
+  border-radius: 10px !important;
+}
+.slide_arrows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.slide_arrows > button {
+  cursor: pointer;
+  appearance: none;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background-color: var(--headings) !important;
+}
+
+.slide_arrows > button:hover{
+  background-color: var(--graphic) !important;
+}
+
+.slide_arrows > .btn_disbaled, .slide_arrows > .btn_disbaled:hover{
+  cursor:default;
+  background: grey !important;
+}
+
+/* booking */
+.booking {
+  min-height: 320px;
+  width: 100%;
+}
+
+.booking_body {
+  display: flex;
+  flex-direction: row;
+  color: var(--backgroud);
+  background-color: var(--headings);
+  align-items: center;
+  padding: 3rem 4rem;
+  height: 100%;
+  border-radius: 10px;
+}
+.booking_body > div {
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.booking_body > div > h2 {
+  color: var(--backgroud);
+}
+
+.booking_body > div > p {
+  max-width: 42ch;
+}
+.booking_body > .btn {
+  background-color: var(--illustrations);
+}
+
+.booking_body > .btn:hover {
+  background-color: var(--uiux);
+}
+
+/* reponsiveness */
+
+/* mobile & tablet */
+@media (max-width: 1300px) {
+  /* booking */
+  .booking_body {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .booking_body > div {
+    text-align: center;
+  }
+}
+
+/* mobile */
+@media (max-width: 800px) {
+  /* main */
+  .main {
+    row-gap: 5rem;
+  }
+
+  /* btn */
+  .btn {
+    width: 176px;
+    height: 44px;
+  }
+
+  /* nav & footer */
+  .nav > .image_wrapper {
+    height: 48px;
+    width: 48px;
+  }
+
+  /* header */
+  .hero > header > h1 {
+    max-width: 15ch;
+  }
+  .hero > header > p {
+    max-width: 24ch;
+  }
+
+  /* categories */
+  .categories {
+    grid-template-areas:
+      "graphic graphic"
+      "ui apps"
+      "illus illus"
+      "photo photo"
+      "motion motion";
+    width: 100%;
+  }
+  /* categories */
+  .graphic,
+  .ui,
+  .apps,
+  .illustration,
+  .photography,
+  .motion {
+    width: 100%;
+  }
+
+  /* bio */
+
+  .bio {
+    grid-template-areas:
+      "image"
+      "body";
+    justify-items: center;
+    row-gap: 2rem;
+  }
+  .bio > .image_wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  .bio > .bio_container > .bio_body {
+    /* row-gap: 1rem; */
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+    padding-inline: 0;
+  }
+
+  .bio > .bio_container > .bio_body > h2 {
+    max-width: 18ch;
+  }
+
+  .bio > .bio_container > .bio_body > p {
+    max-width: 30ch;
+  }
+
+  /* slider */
+  .slider_container > .image_wrapper {
+    min-width: 270px;
+    min-height: 180px;
+  }
+
+  /* booking */
+  .booking_body {
+    padding: 3rem;
+  }
+}
+
+/* tablet */
+@media (min-width: 800px) and (max-width: 1300px) {
+  /* btn */
+  .btn {
+    width: 228px;
+    height: 56px;
+  }
+
+  /* header */
+  .hero > header > p {
+    max-width: 45ch;
+  }
+
+  /* categories */
+  .categories {
+    grid-template-areas:
+      "graphic ui apps"
+      "graphic illus illus"
+      "photo motion motion";
+  }
+
+  .categories > .motion {
+    height: 182px;
+  }
+
+  /* bio */
+
+  .bio {
+    column-gap: 0rem;
+  }
+  .bio > .image_wrapper {
+    width: 353.16px;
+    height: 364px;
+  }
+  .bio > .bio_container > .bio_body {
+    row-gap: 1rem;
+    width: 400px;
+  }
+}

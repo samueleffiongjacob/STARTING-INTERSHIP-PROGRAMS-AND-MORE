@@ -1,0 +1,14 @@
+{
+  "name": "goodboy",
+  "version": "1.0.0",
+  "description": "Finally buiness plan",
+  "main": "gg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SAMUEL EFFIONG",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

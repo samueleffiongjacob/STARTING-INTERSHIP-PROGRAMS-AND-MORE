@@ -1,0 +1,38 @@
+Techathon-Group-2-Team-4
+Techathon-Group-2-Team-4
+9Hc1erNrpAByumnJ
+
+9Hc1erNrpAByumnJ
+
+
+"proxy":"http://localhost:800"
+frontend
+url = "http://localhost:8000/userRouter"
+
+running 
+inside scripts
+"client":"cd client && cd reactapp && npm start",
+"start": "concurrently\"npm run dev"\"npm run client\""
+
+
+
+@c9mentor
+
+gmail:
+teetree362
+PASSWORD:Techathon-Group-2-Team-4
+
+http://localhost:8000/auth/google/callback
+CLIENT_URL:
+
+CLIENT_ID:
+534820841427-pcroe7pfhe1taq8ad6qhadhi6f9dk0dq.apps.googleusercontent.com
+
+CLIENT_SECRET:
+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
+
+
+
+
+Ogidispearl Project Limited
+

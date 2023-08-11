@@ -1,0 +1,21 @@
+to run java file in cmd windows
+
+javac filename.java
+
+
+java filename
+
+///////////////////////////
+in subline 
+ctrl b
+then run java filename
+
+
+/////////////////////////////
+
+// building c in windows .
+/*
+gcc filename -o name the file
+
+.\ filename
+*/

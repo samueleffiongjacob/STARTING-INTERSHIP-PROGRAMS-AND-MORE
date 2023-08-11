@@ -1,0 +1,6 @@
+d.    In the getTax.js module, write a getTax function that 
+    i.    Accepts the user object as a parameter
+    ii.    Checks if the user was   in 2022
+    iii.    Compute for the tax and append the result to the user object with a key of 
+                “payableTax”.
+    iv.    Return the newly computed object

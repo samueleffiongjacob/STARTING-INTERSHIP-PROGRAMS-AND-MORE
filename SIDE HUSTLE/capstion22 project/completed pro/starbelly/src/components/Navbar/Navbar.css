@@ -1,0 +1,60 @@
+.Navbar {
+ display: flex;
+ justify-content: space-between;
+ background-color: rgb(245, 241, 241);
+
+ height: 2em;
+ padding: 15px;
+ position: fixed;
+ width: 100%;
+}
+
+.name {
+ display: flex;
+}
+
+.loog,
+img {
+ margin-top: 0px;
+ margin-left: 5px;
+ margin-right: 0px;
+}
+
+
+.Navbar .Navlink li {
+ list-style: none;
+ padding-right: 40px;
+ padding-left: 40px;
+ color: rgb(255, 255, 255);
+ font-size: 20px;
+}
+
+:link {
+ text-decoration: none;
+}
+
+:Link:hover {
+ background-color: rgb(243, 223, 44);
+ padding: 20px;
+
+
+}
+
+li:Link:hover {
+ color: white;
+
+}
+
+.Navlink {
+ display: flex;
+ margin-top: 0px;
+ margin-right: 10%;
+
+}
+
+.name h2 {
+ margin-top: 0px;
+ font-family: 'Lobster',
+  cursive;
+ color: rgb(97, 94, 94);
+}

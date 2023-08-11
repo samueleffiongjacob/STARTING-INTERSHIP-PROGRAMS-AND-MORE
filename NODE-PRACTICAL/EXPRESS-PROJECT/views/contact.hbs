@@ -1,0 +1,42 @@
+    <main>
+        <section>
+            <nav>
+                <ul id="ww" class="topnav mobile-container">
+                    <li id="nav"><a href="index.hbs">{{caption}}</a></li>
+                    <li id="nav"><a href="contact.hbs" class="active">{{caption1}}</a></li>
+                    <li id="nav" style="float:right" class="right"><a href="register.hbs">{{caption2}}</a></li>
+                    <li id="nav" style="float:right" class="right"><a href="login.hbs" id="a">{{caption3}}</a></li>
+                </ul>
+            
+                <div class=" mobile-container">
+                    <div id="myLinks">
+                        <a href="index.hbs">{{caption}}</a>
+                        <a href="contact.hbs" class="active">{{caption2}}t</a>
+                        <a href="register.hbs">{{caption2}}</a>
+                        <a href="login.hbs" id="a">{{caption3}}</a>
+                    </div>
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            
+            </nav>
+        </section>
+
+
+        <header>{{header}}</header>
+        <section>
+            <form action="index.hbs">
+                <label for="name">NAME</label>
+                <input type="text"  placeholder="ENTER YOUR NAME HERE" required id="name"><br>
+                <label for="email">EMAIL</label>
+                <input type="email" placeholder="samueleffiong@gmail.com" required id="email"><br>
+                <label for="textarea">Enter message below</label>
+                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Enter your Message here"></textarea>
+                <button  class="btn">SUBMIT</button>
+            </form>
+        </section>
+    </main>
+    <footer>&#9400; {{footer}}</footer>
+    <script src="index.js"></script>

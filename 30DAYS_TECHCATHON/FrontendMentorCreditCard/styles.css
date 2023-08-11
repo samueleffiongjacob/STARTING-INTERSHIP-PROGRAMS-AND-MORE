@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 20px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    /* height: 400px; */
+    width: 80%;
+    gap: 20px;
+}
+.card-section {
+    /* flex-shrink: 0; */
+    width: 450px;
+    height: 420px;
+    position: relative;
+    color: white;
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-grow: 1;
+}
+.form-section .no-display {
+    display: none;
+}
+
+/* FORM CSS */
+form label, form span {
+    font-size: 10px;
+}
+form span {
+    color: hsl(0, 100%, 66%);
+}
+.date-ccv-container {
+    display: flex;
+    gap: 20px;
+}
+.date-container, 
+.ccv-conatiner,
+#date-month, 
+#date-year {
+    width: 50%;
+}
+
+.exp-date-inputs {
+    display: flex;
+    gap: 5px;
+}
+.form-section form {
+    margin: auto;
+    max-width: 350px;
+}
+form input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid hsl(279, 6%, 55%);
+}
+form button {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+}
+.date-ccv-container,
+.form-number-container {
+    margin: 15px 0;
+}
+form #confirm-button {
+    margin-top: 10px;
+}
+/* Thank you css */
+.thankyou-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin: auto;
+}
+.thankyou-container h1 {
+    margin-top: 15px;
+}
+.thankyou-container p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: hsl(279, 6%, 55%);
+}
+.thankyou-container #thankyou {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    margin-top: 10px;
+}
+
+/* CARDS CSS */
+
+.card-section .card-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 360px;
+}
+.card-section .card-back {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    width: 360px;
+}
+.card-section .front-info {
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 320px;
+}
+.card-section .details-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.card-section .front-info img {
+    width: 67.2px;
+    margin-bottom: 15%;
+}
+.card-section .front-info h3 {
+    margin-bottom: 10%;
+}
+.card-section #card-ccv {
+    position: absolute;
+    z-index: 6;
+    bottom: 90px;
+    right: 45px;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-image: url(images/bg-main-mobile.png);
+        display: block;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        gap: 100px;
+    }
+    .card-section {
+        width: 100%;
+        /* max-width: 440px;
+        min-width: 440px; */
+    }
+    .form-section {
+        width: 100%;
+    }
+    .card-section .card-front {
+        width: 80%;
+        top: 227px;
+    }
+    .card-section .card-back {
+        width: 80%;
+        bottom: 120px;
+    }
+    .card-section .front-info {
+        width: 64%;
+        top: 227px;
+    }
+    .card-section #card-ccv {
+        bottom: 210px;
+    }
+}

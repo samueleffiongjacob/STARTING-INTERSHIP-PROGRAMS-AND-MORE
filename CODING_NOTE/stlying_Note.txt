@@ -1,0 +1,20 @@
+pycodestyle --first optparse.py // check your python code before push
+
+pycodestyle --show-source --show-pep8 testsuite/E40.py // show the source code for each error, and even the relevant text from PEP 8
+
+pycodestyle --statistics -qq Python-2.5/Lib // you can display how often each error was found:
+
+////// AUTO FORMATE
+
+when ever u want to work with python
+create .vscode // folder
+create settings.json // file
+
+// paste below code 
+
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+}

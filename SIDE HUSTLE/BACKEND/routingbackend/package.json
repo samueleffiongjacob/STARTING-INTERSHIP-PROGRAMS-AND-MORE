@@ -1,0 +1,12 @@
+{
+  "name": "routingbackend",
+  "version": "1.0.0",
+  "description": "URL ROUTING",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "dev":  "nodemon index.js"
+  },
+  "author": "Samuel",
+  "license": "ISC"
+}

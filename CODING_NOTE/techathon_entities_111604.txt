@@ -1,0 +1,102 @@
+Account
+	-_id
+	-username
+	-email
+	-firstName
+	-lastName
+	-password
+	-phoneNumber
+	-picture
+	
+Mentees
+	-_id
+	-profile -> Account(_id)
+	-cohost -> Cohosts(_id)
+	-track -> Tracks(_id)
+	-status ["active", "inactive", "suspended"]
+	-team -> Teams(_id)
+
+Mentors
+	-_id
+	-profile -> Account(_id)
+	-tracks -> Tracks(_id)
+	-cohost -> Cohosts(_id)
+
+Cohosts
+	-_id
+	-name
+	-current [true, false]
+	-start
+	-end
+Admin
+	-_id
+	-profile -> Account(_id)
+	
+Tracks
+	-_id
+	-name
+	-category ["coding", "non_coding"]
+	
+Teams
+	-_id
+	-name
+	-link
+	-cohost -> Cohosts(_id)
+	-members [menteeID]
+	-teamLeads [teamLead, asstLead]
+
+Tasks
+	-_id
+	-type ["team", "individual"]
+	-track -> Tracks(_id)
+	-cohost -> Cohosts(_id)
+	-topic
+	-task
+	-description
+	-hintsAndTips
+	-submissionDate
+	-uploadLink
+	
+Classes
+	-_id
+	-track -> Tracks(_id)
+	-cohost -> Cohosts(_id)
+	-title
+	-description
+	-videoLink
+	-resourcesLink
+	-slideOrImagesLink
+	
+	
+SubmittedTasks
+	-_id
+	-track -> Tracks(_id)
+	-cohost -> Cohosts(_id)
+	-mentee -> Mentees(_id)
+	-taskNotes
+	-taskQuestions
+	-grade
+
+
+
+
+
+
+
+
+
+Quiz
+
+
+Resources
+	-link
+	-fileType
+	-class -> Classes(_id)
+
+
+Announcements
+
+OpenSources
+
+WaitLists
+

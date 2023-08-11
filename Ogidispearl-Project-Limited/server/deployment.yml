@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ogidispearl-project-limited
+  name: ogidispearl-project-limited
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: ogidispearl-project-limited
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ogidispearl-project-limited
+    spec:
+      containers:
+      - image: docker.io/ogidispearl/ogidispearl-project-limited
+        name: webapp
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 3080
+status: {}

@@ -1,0 +1,52 @@
+import axios from 'axios'
+
+// reciving data from client 
+const API_URL = process.env.API_URL || '';
+
+const API_EMAIL_KEY = process.env.API_EMAIL_KEY || "";
+//function to get the data from the  the client side 
+// const contact = async () => {
+//     await axios(API_URL);
+// };
+
+
+anothe way of doing create form 
+// const responseFact = await subcriberEmail() // calling the fuction on my controller
+ /***
+         * OPTION 2 WAY
+         * name:req.body.name,
+         * email:req.body.email,
+         * costumerMessage:req.body.message? req.body.message : false
+         */
+
+
+
+sendgrid proper
+import sgMail, { ResponseError } from '@sendgrid/mail'
+
+// using snd grid and  get API KE FROM SEND GRID
+sgMail.setApiKey(API_EMAIL_KEY)
+
+// sendgrid
+        const msg = {
+            "from": {
+                "name": "Ogidispearl Project Limited",
+                "email": "ogidispearlprojectlimited@gmail.com"
+            },
+            "to": newMail.email,
+            "subject": 'THANK YOU FOR CONTACT US OUR COSTOMER REPRESENTATIVES WOULD ATTAIN TO YOU SHORTLY',
+            "dynamic_template_data": {
+
+            },
+            "text": `<h2>email ${newMail.email}? THANK YOUR FOR CONSTACTING COMPANY NAME</h2>
+            <h4> Feel free to return to our WEBSITE copy and paste the below link or click on the button </h4>
+            <a href ="https://ogidispearl-project-limited-peach.vercel.app"
+            <button a href = "https://ogidispearl-project-limited-peach.vercel.app">CLICK HERE</botton>
+            `,
+             "template_id": "d-9a3e4e68317149a39e70bf3033d96345"
+
+        }
+        // send emails
+        sgMail.send(msg)
+            .then((response) => console.log('email sent', response, ResponseError))
+            .catch(error => console.log(error.response));

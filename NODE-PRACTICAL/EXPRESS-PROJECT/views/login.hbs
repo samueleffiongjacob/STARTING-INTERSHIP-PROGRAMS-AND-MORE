@@ -1,0 +1,46 @@
+    <main>
+        <section>
+            <nav>
+                <ul id="ww" class="topnav">
+                    <li id="nav" style="float:left" class="right"><a href="register.hbs">{{caption}}</a></li>
+                    <li id="nav" style="float:right" class="right"><a href="login.hbs" id="a" class="active">{{caption1}}</a></li> 
+                </ul>
+                <div  class="mobile-container">
+                    <div id="myLinks">
+                        <a href="register.hbs">{{caption}}</a>
+                        <a href="login.hbs" id="a" class="active">{{caption1}}</a>
+                    </div>
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <header>{{caption2}}</header>
+            <p class="r">{{caption3}}</p>
+            <div>
+                <form action="index.hbs">
+                    <label for="email">{{caption4}}</label><br>
+                    <input type="email" required placeholder="samueleffiong@gmail.com" id="email"><br><br>
+                    <label for="Password">{{caption5}}</label><br>
+                    <input type="password" required placeholder="password" id="Password"><br>
+                    <div>
+                        <label><input id="rememberme" name="rememberme" value="remember" type="checkbox" />{{caption6}}</label>
+                    </div>
+                    <div class="btn0">
+                        <a href="register.hbs" class="btn1">{{caption7}}</a>
+                        <button type="submit" class="btn2">{{caption8}}</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </section>
+        <section>
+        </section>
+        
+    </main>
+    <footer>&#9400; {{footer}}</footer>
+    <script src="index.js"></script>

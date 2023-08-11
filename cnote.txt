@@ -1,0 +1,109 @@
+##########starting c program
+#include <stdio.h>
+
+int main(void)
+{
+	printf("Hello World\n");
+	return(0);
+}
+
+############running c program
+1) gcc file name.
+any green/light green means excutable program
+		or
+2) complile using exact of directory
+gcc filename -o name u want
+
+		or
+3) compile using exact name 
+make file name    
+
+#######################
+
+standing input and output c
+
+  #include <stdio .h>
+
+int main (void)
+{
+	
+	
+	printf("my initials are : %c%c%c and my age is %d.\n",'J','R','E',28);
+	return(0)
+
+
+#include <stdio .h>
+
+int main (void)
+{
+	char f,m,l;
+	int age;
+	
+	scanf("%c %c %c %d", &f,&m, &l,&age);
+	printf("my initials are : %c%c%c and my age is %d.\n",f,m,l,age);
+	return(0)
+}
+
+#include <stdio .h>
+
+int main (void)
+{
+	char f,m,l;
+	int age;
+	
+	printf("Enter your initials, follow by your age: ");
+	scanf("%c %c %c %d", &f,&m, &l,&age);
+	printf("my initials are : %c%c%c and my age is %d.\n",',f,m,l,age);
+	return(0)
+}
+
+#include <stdio.h>
+int main(void)
+
+{
+	int i;
+	double d;
+	char c;
+	
+	prinf("The size of an int is : %lu.\n", (unsigned long) sizeof(i));
+	prinf("The size of an double is : %lu.\n", (unsigned long) sizeof(d));
+	prinf("The size of an c is : %lu.\n", (unsigned long) sizeof(c));
+	return(0);
+}
+
+
+#############################
+#!/bin/bash
+gcc -E $CFILE -o c
+
+
+####
+betty comment
+/**
+ * main - entry point
+ *
+ * Return: 0 after printing the function
+*/
+
+
+
+#include <stdio.h>
+/**
+ * main - Entry point
+ * Return :Always 0 (Success)
+*/
+int main(void)
+{
+        char a;
+        int i;
+        long int li;
+        long long int lli;
+        float f;
+        printf("Size of a char: %lu byte(s) \n", (unsigned long)sizeof(a));
+        printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(i));
+        printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(li));
+        printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(lli));
+        printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+
+        return (0);
+}

@@ -1,0 +1,51 @@
+.home {
+ background-image: url(../assets/home/bakimage.jpeg);
+ background-color: white;
+ background-size: cover;
+ padding: 50px;
+ height: 100%;
+ margin: auto;
+ opacity: 1;
+ box-sizing: border-box;
+ padding-bottom: 8em;
+ 
+
+}
+
+.home-content {
+margin-top: -5em;
+}
+.home-content-image {
+
+ height: 600px;
+ 
+ 
+
+}
+
+.home-content-image img {
+ transform: scale(0.8);
+ height: 100%;
+ width: 100%;
+ border-radius: 300px;
+}
+
+
+.i-button>:hover {
+ background-color: blue;
+ color: var(--white);
+ cursor: pointer;
+}
+
+.s-button>:hover {
+ cursor: pointer;
+}
+
+.s-button {
+ width: 8rem;
+ height: 3rem;
+}
+
+.home-context-text>:nth-child(1) {
+ color: blue;
+}

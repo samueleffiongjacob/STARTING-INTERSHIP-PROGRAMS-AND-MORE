@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+
+:root {
+  /* colors*/
+
+  /* categories */
+
+  --graphic: #755cde;
+  --uiux: #f6a560;
+  --apps: #f39e9e;
+  --illustrations: #eb7565;
+  --photography: #61c4b7;
+  --motion-graphics: #552049;
+
+  /* general */
+  --headings: #030303;
+  --body-text: #7a746e;
+  --backgroud: #fff7f0;
+
+  --category-radius: 8px;
+  --category-padding: 1rem;
+
+  /*font-sizes*/
+
+  /* heading (L) */
+  --heading-l: 56px;
+  --l-line-height: 70px;
+
+  /* heading (M) */
+  --heading-m: 40px;
+  --m-line-height: 51px;
+
+  /* heading (S) */
+  --heading-s: 32px;
+  --s-line-height: 40px;
+
+  /* p body */
+  --p-body: 18px;
+  --p-line-height: 28px;
+
+  /* p btn */
+
+  --fs-btn: 16px;
+
+  /* font weight */
+
+  /* p body */
+
+  --fw-500: 500;
+
+  /* headings */
+
+  --fw-700: 700;
+
+  /* font-families */
+
+  --ff-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+/* root responsiveness */
+
+/* mobile */
+
+@media (max-width: 800px) {
+  :root {
+    --fs-btn: 14px;
+    --p-body: 16px;
+    --heading-l: 36px;
+    --l-line-height: 45px;
+    --heading-m: 26px;
+    --m-line-height: 33px;
+    --heading-s: 24px;
+    --s-line-height: 30px;
+  }
+}
+
+/* tablet */
+@media (min-width: 800px) and (max-width: 1300px) {
+  :root {
+    --heading-l: 44px;
+    --l-line-height: 55px;
+    --heading-m: 32px;
+    --m-line-height: 40px;
+  }
+}
+
+/* ------------- */
+/* Reset         */
+/* ------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins    */
+
+body,
+h1,
+h2,
+h3,
+p,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-weight: var(--fw-500);
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+ which suggests default styling will be removed */
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--headings);
+  font-weight: var(--fw-700);
+}
+
+h1 {
+  font-size: var(--heading-l);
+  line-height: var(--l-line-height);
+}
+h2 {
+  font-size: var(--heading-m);
+  line-height: var(--m-line-height);
+}
+h3 {
+  font-size: var(--heading-s);
+  line-height: var(--s-line-height);
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: var(--p-line-height);
+  font-family: var(--ff-jakarta-sans);
+  font-size: var(--p-body);
+  background-color: var(--backgroud);
+  color: var(--body-text);
+
+  /* to strech out elements */
+
+  display: grid;
+  overflow-x: hidden;
+}
+
+#__next {
+  min-height: 100vh;
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------- */
+/* Utility Classes  */
+/* ------------- */
+
+/* general */
+
+/*flex*/
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/*grid*/
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+
+/* 
+or * + * 
+or *:not(:first-child)
+*/
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+  /* outline: 1px solid red; */
+}
+
+.flow--space-small {
+  --flow-space: 0.5rem;
+}
+
+.main-body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content max-content min-content;
+  position: relative;
+  row-gap: 2rem;
+}
+
+.container {
+  padding-inline: 5em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* for visually imapaired */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* reponsiveness */
+
+/* mobile & tablet */
+@media (max-width: 1000px) {
+}
+
+/* mobile */
+@media (max-width: 800px) {
+  .container {
+    padding-inline: 1em;
+  }
+}
+
+/* tablet */
+@media (min-width: 800px) and (max-width: 1300px) {
+  .container {
+    padding-inline: 2em;
+  }
+}

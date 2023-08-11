@@ -1,0 +1,30 @@
+Package Control Messages
+========================
+
+AutoPEP8
+--------
+
+  Sublime Auto PEP8 Formatting
+  (https://github.com/wistful/SublimeAutoPEP8)
+
+  Automatically formats Python code to conform to the PEP 8 style guide using autopep8 module
+  Supports ST3 only.
+
+  **Note**: The _walrus_(`if thing := foo.bar.baz: pass`) operator is not supported. 
+  Auto-formatting is running by SublimeText python interpreter, 
+  which is locked to version 3.3, and _walrus_ operator is supporter starting python3.8.
+
+  Features:
+      format / preview code according PEP8
+      format / preview selected text
+      format / preview all python modules in folder
+      side bar menu
+      formated code while saving
+
+  Using:
+      SideBar - right click on the file(s) or folder(s)
+      Active view - right click on the view
+      Selected text - right click on the selected text
+      On Save - provide by settings: option format_on_save
+      Command Palette - bring up the Command Palette and select `PEP8: Format Code` or `PEP8: Preview Changes`
+      Hotkeys - `Command/Control + Shift + 8` to format code, `Command/Control + 8` to preview changes

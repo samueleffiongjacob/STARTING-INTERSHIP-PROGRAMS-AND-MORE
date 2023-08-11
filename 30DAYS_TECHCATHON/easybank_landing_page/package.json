@@ -1,0 +1,25 @@
+{
+  "name": "easybank_landing_page",
+  "version": "1.0.0",
+  "description": "Easybank landing page is a front-end challenge from Frontend Mentor (frontendmentor.io). Developed with Tailwind CSS (low-level utility-based CSS framework) and modern CSS techniques (CSS Flexbox and CSS Grid).",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/css/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/St3f4nn/easybank_landing_page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/St3f4nn/easybank_landing_page/issues"
+  },
+  "homepage": "https://github.com/St3f4nn/easybank_landing_page#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-debug-screens": "^2.2.1"
+  }
+}

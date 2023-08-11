@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ogidispearl-project-limited-api-v1
+  labels:
+    run: ogidispearl-project-limited-api-v1
+spec:
+  ports:
+  - port: 9090
+    protocol: TCP
+  selector:
+    app: ogidispearl-project-limited-api-v1
+  type: NodePort

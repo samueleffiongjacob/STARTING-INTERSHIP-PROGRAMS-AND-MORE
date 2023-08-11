@@ -1,0 +1,7 @@
+[run]
+omit =
+    */.local/*
+    env/*
+    tests/*
+    limbus/tests/*
+

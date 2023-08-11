@@ -1,0 +1,38 @@
+FROM node:17 AS ogidispearl-project-limited-HOST-IN-NAMECHIP-CLIENT
+
+WORKDIR usr/src/client
+
+copy client/ ./client/
+RUN cd client 
+
+RUN yarn
+
+RUN yarn build
+
+FROM node:17 ogidispearl-project-limited-HOST-IN-NAMECHIP-SERVER
+
+WORKDIR /root/
+
+COPY --from=AS ogidispearl-project-limited-HOST-IN-NAMECHIP-CLIENT /usr/src/app/client/out ./client/out
+
+COPY server/package*.json ./server/
+
+RUN cd server
+
+RUN yarn
+
+RUN yarn global add pm2 
+
+COPY . .
+
+RUN yarn build
+
+EXPOSE 3080
+
+CMD ["pm2-runtime","node dist/server.js -i max"]
+
+// dont copy only for package .json
+"deploy": "yarn build --prefix client && yarn start --prefix server",
+
+
+"start": "yarn Dockerfile --prefix server"

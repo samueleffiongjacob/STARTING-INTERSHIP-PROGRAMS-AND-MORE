@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./scss/style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="container">
+        <div class="col card-wrapper">
+          <div class="card-back p-relative">
+            <img src="./images/bg-card-back.png" alt="Card Back">
+            <span class="cvc">000</span>
+          </div>
+          <div class="card-front p-relative">
+            <img src="./images/bg-card-front.png" alt="Card Front" class="front-card-img">
+            <img src="./images/card-logo.svg" alt="Logo" class="card-logo">
+            <span class="card-number">0000 0000 0000 0000</span>
+            <div class="card-holder-wrapper">
+              <span class="card-name">Jane Appleseed</span>
+              <span class="card-expired"><span class="card-month">00</span>/<span class="card-year">00</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col form-wrapper">
+          <form id="card-submit-form" action="/">
+            <div class="form-group">
+              <label for="card-name">Cardholder Name</label>
+              <div class="outline-hover">
+                <input type="text" placeholder="e.g. Jane Appleseed" id="card-name" maxlength = "22">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <div class="outline-hover">
+                <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-number" maxlength = "19">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-col-2">
+                <div class="card-expired-wrap">
+                  <label for="card-month">Exp. Date (MM/YY)</label>
+                  <div class="card-expired-input-wrap p-relative">
+                    <div class="card-expired-wrap">
+                      <div class="outline-hover">
+                        <input type="text" min="1" max="12"  placeholder="MM" id="card-month" pattern="\d*" maxlength = "2">
+                      </div>
+                    </div>
+                    <div class="card-expired-wrap">
+                      <div class="outline-hover">
+                        <input type="text" placeholder="YY" id="card-year" pattern="\d*" maxlength = "2">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-cvc-wrap">
+                  <label for="card-cvc">CVC</label>
+                  <div class="outline-hover">
+                    <input type="text" placeholder="e.g. 123" id="card-cvc" pattern="\d*" maxlength = "3">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn" disabled="disabled">Confirm</button>
+            </div>
+          </form>
+          <div class="thankyou">
+            <img src="./images/icon-complete.svg" alt="Completed">
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+            <a href="." class="btn">Continue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/app.js"></script>
+</body>
+</html>
