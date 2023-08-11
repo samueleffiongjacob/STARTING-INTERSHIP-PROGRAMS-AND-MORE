@@ -65,6 +65,114 @@ const Contact = () => {
       )
       e.target.reset()
   }
+  // BACKEND SERVICES STARTS HERE DONE BY THE BACKEND ENGINEER
+
+  // POSTING FORM CLIENT TO SERVER  to be store in  MONGODB BACK END
+
+  // CREATING AXIOS INSTANCE  for the api url https://ogidispearl-project-limited-api-v1.onrender.com/v1 http://localhost:3080/v1
+  const API_URL = axios.create({
+    baseURL: "https://ogidispearl-project-limited-api-v1.onrender.com/v1",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  // SETTING HEADERS FOR axios to avoid network error
+  //API_URL.req.headers["Content-Type"] // set request headers
+
+  //for contact
+  // const [email, setEmail] = useState("");
+  // const [names, setName] = useState("");
+  // const [info, setmessage] = useState("");
+
+  const initialState = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const [contactUsData, setContactUsData] = useState(initialState);
+  // const [upadateData, setUpdatedata] = useState(initialState);
+  // response for browser
+  const [messageRes, setMessageRes] = useState("");
+  const [errorRes, setErrorRes] = useState("");
+  const [subcriberRes, setSubcriberRes] = useState("");
+  const [errorResSub, setErrorResSub] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactUsData((prev) => ({ ...prev, [name]: value }));
+    // setUpdatedata ((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const httpsSubmitForm = async (e) => {
+    e.preventDefault();
+
+    API_URL.post("/message", contactUsData)
+      .then((response) => {
+        // console.log(response);
+        setMessageRes(response.data.success); //response.data.success
+        setTimeout(() => {
+          setMessageRes("");
+        }, 5000);
+      }) //.then((resData) => console.log(resData)) == first way
+      .catch((error) => {
+        // console.log(err)
+        setErrorRes(error.response.data.error); //response.data.error
+        setTimeout(() => {
+          setErrorRes("");
+        }, 5000); //console.log(err);
+      });
+
+    setContactUsData(initialState);
+
+    // patching data if it exist
+    API_URL.patch("/message", contactUsData)
+      .then((response) => {
+        // console.log(response);
+        setMessageRes(response.data.success); //response.data.success
+        setTimeout(() => {
+          setMessageRes("");
+        }, 5000);
+      }) //.then((resData) => console.log(resData)) == first way
+      .catch((error) => {
+        // console.log(err)
+        setErrorRes(error.response.data.error); //response.data.error
+        setTimeout(() => {
+          setErrorRes("");
+        }, 5000); //console.log(err);
+      });
+
+    setContactUsData(initialState);
+  };
+
+  // for subcriber
+  const [SUBCRIBERS, setsubcriber] = useState("");
+  const httpsSubcribeEmail = async (e) => {
+    e.preventDefault();
+
+    // sendEmail(event); //this send mail way was giving 446 error
+    API_URL.post("/subcriber", {
+      email: SUBCRIBERS,
+    })
+      .then((response) => {
+        //console.log(response)
+        setSubcriberRes(response.data.success); //response.data.success
+        setTimeout(() => {
+          setSubcriberRes("");
+        }, 5000);
+      }) // then((resData) => console.log(resData)) = first way
+      .catch((error) => {
+        // console.log(error);
+        setErrorResSub(error.response.data.error);
+        setTimeout(() => {
+          setErrorResSub("");
+        }, 5000);
+      }); // .catch((err) => console.log(err))
+
+    setsubcriber("");
+  };
+
+  // BACKEND SERVICES ENDS HERE
   return (
     <>
       <Head>
